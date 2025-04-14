@@ -1,17 +1,21 @@
-DOCKER
+###DOCKER
 
-BOOK SCRAPER & HTTP SERVER (Dockerized)
+##BOOK SCRAPER & HTTP SERVER (Dockerized)
 
 This project scrapes book data from books.toscrape.com, saves it into a CSV file, and serves the output via a simple HTTP server — all containerized using Docker.
 
-PROJECT STRUCTURE
+---
+
+##PROJECT STRUCTURE
 
 ├── Dockerfile
 ├── README.md
 ├── webscrapping.py
 ├── scraped_books.csv (generated after running)
 
-FEATURES
+---
+
+##FEATURES
 
 Scrapes title, price, and availability of books.
 
@@ -21,12 +25,16 @@ Starts a simple HTTP server to serve the files.
 
 Fully containerized with Docker.
 
-Prerequisites
+---
+
+##Prerequisites
 
 Before you begin, ensure you have Docker installed:
 Download Docker
 
-How to Build and Run
+---
+
+##How to Build and Run
 
 1.Clone the repository / place files in a directory:
 
@@ -42,7 +50,9 @@ Access the results:
 
 Open your browser and go to: http://localhost:8000/scraped_books.csv
 
-Inside the Script (webscrapping.py)
+---
+
+##Inside the Script (webscrapping.py)
 
 Scrapes the first page of books.
 
@@ -55,7 +65,9 @@ Saves the result as scraped_books.csv.
 
 Starts a local HTTP server to expose the file.
 
-Dockerfile Summary
+---
+
+##Dockerfile Summary
 
 The Dockerfile:
 
