@@ -1,0 +1,74 @@
+            GUIDE- WEB SCRAPPING SCRIPT FOR BOOKS TO SCRAPE
+1. Prerequisites
+Before running the script, install  the required libraries:
+--> pip install requests beautifulsoup4 pandas
+requests-> fetches web page content
+BeautifulSoup-> extracts specific data from the HTML
+pandas-> saves extracted data into a CSV file
+
+2. How the Script Works
+Step 1: Import required libraries
+The script begins by importing necessary modules.
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+Step 2: Define the target website
+The website URL is stored in a variable.
+URL="http://books.toscrape.com"
+Step 3: Fetch the website content
+The script fetches the web page using get function.
+response=requests.get(url,timeout=10)
+response.raise_for_status()
+Step 4: Parse the HTML content
+BeautifulSoup is used to read and extract data from the HTML page.
+soup=BeautifulSoup(response.text,"html.parser")
+Step 5: Extract Book data
+Each book is inside an <article> tag  with the class "product_pod". The script loops through them and extracts:
+Title-> Found inside the <h3> tag.
+Price-> Extracted from <p> with class "price_color".
+Availability-> Extracted from <p> with class "instock availability".
+books_data=[]
+for book in books:
+            title=book.h3.a["title"]
+            price=book.find("p",class_="price_color").text
+            availability=book.find("p",class_="instock availability").text.strip()
+            books_data.append({"Title": title, "Price": price, "Availability": availability})
+Step 6: Save the data to a CSV File
+Once data is extracted, it is stored in a CSV file using pandas.
+df=pd.DataFrame(books_data
+df.to_csv("scraped_books.csv",index=False)        
+print("Scraping completed! Data saved to scraped_books.csv")
+The CSV file is created in the same folder as the script.
+
+3. Running the Script
+Save the script as webscrapping.py.
+Run the script in a terminal or command prompt:
+            --> python webscrapping.py
+Check the CSV file in the script directory.
+Open scraped_books.csv in Excel or Notepad.
+
+4. Expected Output
+The CSV file contains the data like title,price,availability of a book.
+Title,Price,Availability
+A Light in the Attic,Aœ51.77,In stock
+Tipping the Velvet,Aœ53.74,In stock
+Soumission,Aœ50.10,In stock
+Sharp Objects,Aœ47.82,In stock
+Sapiens: A Brief History of Humankind,Aœ54.23,In stock
+The Requiem Red,Aœ22.65,In stock
+The Dirty Little Secrets of Getting Your Dream Job,Aœ33.34,In stock
+"The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",Aœ17.93,In stock
+The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics,Aœ22.60,In stock
+The Black Maria,Aœ52.15,In stock
+"Starving Hearts (Triangular Trade Trilogy, #1)",Aœ13.99,In stock
+Shakespeare's Sonnets,Aœ20.66,In stock
+Set Me Free,Aœ17.46,In stock
+Scott Pilgrim's Precious Little Life (Scott Pilgrim #1),Aœ52.29,In stock
+Rip it Up and Start Again,Aœ35.02,In stock
+"Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991",Aœ57.25,In stock
+Olio,Aœ23.88,In stock
+Mesaerion: The Best Science Fiction Stories 1800-1849,Aœ37.59,In stock
+Libertarianism for Beginners,Aœ51.33,In stock
+It's Only the Himalayas,Aœ45.17,In stock
+
+        
