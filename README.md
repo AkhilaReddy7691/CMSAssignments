@@ -121,4 +121,14 @@ terraform plan
 terraform apply
 terraform destroy
 
+---
 
+##Summary
+
+Tool	              Focus	                         Highlights
+
+Docker	        Containerization	             Simple app in a lightweight image
+Kubernetes	    Orchestration	                 Scalable deployments and services
+AWS EKS	        Managed Kubernetes	           Cloud-native orchestration
+AWS Lambda	    Serverless Functions	         Event-driven automation
+Terraform	      Infrastructure as Code (IaC)   Declarative resource provisioning
