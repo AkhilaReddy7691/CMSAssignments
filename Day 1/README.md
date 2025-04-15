@@ -1,5 +1,7 @@
 ###DOCKER
 
+---
+
 ##BOOK SCRAPER & HTTP SERVER (Dockerized)
 
 This project scrapes book data from books.toscrape.com, saves it into a CSV file, and serves the output via a simple HTTP server — all containerized using Docker.
@@ -81,7 +83,10 @@ Starts an HTTP server on port 8000.
 
 ---
 
-![Docker3](https://github.com/user-attachments/assets/aa08391c-6911-467e-95ae-ba923aa59336)
+
 ![Docker1](https://github.com/user-attachments/assets/886d7966-4929-4171-be88-9bd413e448a0)
+
 ![Docker2](https://github.com/user-attachments/assets/f5fbc8b0-465c-44ec-bacd-7d33b05a854d)
+
+![Docker3](https://github.com/user-attachments/assets/aa08391c-6911-467e-95ae-ba923aa59336)
 
