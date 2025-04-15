@@ -42,11 +42,11 @@ Download Docker
 
 2.Build the Docker image:
 
-docker build -t book-scraper .
+docker build -t webscrapper-images .
 
 3.Run the container:
 
-docker run -p 8000:8000 book-scraper
+docker run -p 8000:8000 webscrapper-images
 
 Access the results:
 
