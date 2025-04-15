@@ -64,5 +64,4 @@ This project demonstrates the creation and deployment of a simple AWS Lambda fun
 
 ![bucket2](https://github.com/user-attachments/assets/07acf7d2-73ab-4169-a2e6-8967945b819a)
 
-
-
+![bucket3](https://github.com/user-attachments/assets/69fa7f88-a425-43a0-bcfa-04103cc79542)
