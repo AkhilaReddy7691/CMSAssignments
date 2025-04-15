@@ -1,5 +1,7 @@
 ##AWS EKS Cluster Setup 
 
+---
+
 This guide explains how to create a Kubernetes cluster on Amazon EKS using the terminal inside Visual Studio Code (`VS Code`) and deploy workloads that will reflect in the AWS EKS Console.
 
 ---
@@ -19,7 +21,6 @@ Make sure you have the following installed:
 
 First, configure your AWS credentials:
 
-```bash
 aws configure
 
 Provide:
@@ -88,3 +89,16 @@ eksctl delete cluster --name my-cluster --region ap-south
 Make sure your AWS CLI and IAM role have the right permissions for EKS.
 
 Use proper naming conventions and choose a region closest to you.
+
+---
+
+
+
+![awssetup2](https://github.com/user-attachments/assets/69bc8074-c705-4999-83cf-e7d97b4db3ac)
+
+![awssetup3](https://github.com/user-attachments/assets/b78f4a63-a113-4f5e-84c6-c4626ad631b5)
+
+![IAMconfig](https://github.com/user-attachments/assets/05e1915e-fb77-4041-be02-478bcdf64123)
+
+![cluster](https://github.com/user-attachments/assets/ac0dc549-b6ee-40a2-add1-8034ffda526f)
+
