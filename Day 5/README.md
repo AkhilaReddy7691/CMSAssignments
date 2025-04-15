@@ -1,5 +1,7 @@
 ##Terraform AWS EC2 Instance Deployment
 
+---
+
 This project demonstrates how to use Terraform to provision an EC2 instance on AWS using minimal configuration.
 
 ---
@@ -73,6 +75,21 @@ Tag: Name = "FirstServer"
 To delete the created EC2 instance:
 
 terraform destroy
+
+---
+
+
+![terraform1](https://github.com/user-attachments/assets/f52b1f4f-e8c1-4d42-8256-e82e1a3205e6)
+
+![terraform2](https://github.com/user-attachments/assets/008cc9d3-85e7-4c7a-b262-c387231af524)
+
+![terraform3](https://github.com/user-attachments/assets/757652e9-ae54-49e5-9862-6ae481e8240f)
+
+![terraform4](https://github.com/user-attachments/assets/1a3fc9fb-6e3b-460e-b868-c37cd9c0fdb2)
+
+
+
+
 
 
 
