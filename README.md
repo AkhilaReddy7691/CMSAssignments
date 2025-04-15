@@ -16,20 +16,21 @@ In this section, we build a basic Python web scraper app using Docker.
 - Dockerized the entire app.
 
 ###Docker Commands
-```bash
-docker build -t book-scraper .
-docker run -p 8000:8000 book-scraper
 
-# Output
+docker build -t webscrapper-images .
+docker run -p 8000:8000 webscrapper-images
+
+#Output
+
 Open your browser and go to: http://localhost:8000/scraped_books.csv
 
 ---
 
-## Day 2: Kubernetes – Deploying with K8s
+##Day 2: Kubernetes – Deploying with K8s
 
 We move from containers to orchestration using Kubernetes to manage deployments at scale.
 
-## Features
+##Features
 
 Pod and Deployment creation using YAML.
 
