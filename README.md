@@ -18,6 +18,7 @@ In this section, we build a basic Python web scraper app using Docker.
 ###Docker Commands
 
 docker build -t webscrapper-images .
+
 docker run -p 8000:8000 webscrapper-images
 
 #Output
@@ -39,9 +40,9 @@ Exposed services using NodePort.
 Explored basic kubectl operations.
 
 
-kubectl apply -f deployment.yaml
+kubectl apply -f quiz-app-deployment.yaml
 
-kubectl apply -f service.yaml
+kubectl apply -f quiz-app-service.yaml
 
 ---
 
@@ -59,7 +60,8 @@ Deployed workloads via manifests.
 
 Managed autoscaling and IAM roles.
 
-## Tools Used
+##Tools Used
+
 eksctl
 
 kubectl
@@ -68,11 +70,11 @@ IAM Roles for Service Accounts (IRSA)
 
 ---
 
-## Day 4: AWS Lambda – Serverless Functions
+##Day 4: AWS Lambda – Serverless Functions
 
 We explore serverless computing using AWS Lambda for lightweight, event-driven automation.
 
-## Features
+##Features
 
 Created Python-based Lambda function.
 
@@ -87,11 +89,11 @@ lambda_function.py
 ---
 
 
-### Day 5: Terraform – Infrastructure as Code
+###Day 5: Terraform – Infrastructure as Code
 
 We finish by managing all infrastructure components using Terraform.
 
-## Features
+##Features
 
 Launched an EC2 instance using main.tf.
 
@@ -99,37 +101,53 @@ Managed AWS provider and region.
 
 Used terraform init, apply, destroy.
 
-## main.tf
+##main.tf
 
 provider "aws" {
+
   region = "us-east-1"
+  
 }
 
 resource "aws_instance" "app_server" {
+
   ami           = "ami-00a929b66ed6e0de6"
+  
   instance_type = "t2.micro"
 
   tags = {
-    Name = "FirstServer"
+  
+    Name = "FirstServer" 
+    
   }
+  
 }
 
-## Commands
+
+##Commands
 
 terraform init
+
 terraform validate
+
 terraform plan
+
 terraform apply
+
 terraform destroy
 
 ---
 
 ##Summary
 
-Tool	              Focus	                         Highlights
+Tool	      -          Focus	              -                   Highlights
 
-Docker	        Containerization	             Simple app in a lightweight image
-Kubernetes	    Orchestration	                 Scalable deployments and services
-AWS EKS	        Managed Kubernetes	           Cloud-native orchestration
-AWS Lambda	    Serverless Functions	         Event-driven automation
-Terraform	      Infrastructure as Code (IaC)   Declarative resource provisioning
+Docker	     -     Containerization	        -         Simple app in a lightweight image
+
+Kubernetes	 -     Orchestration	          -           Scalable deployments and services
+
+AWS EKS	     -    Managed Kubernetes	      -         Cloud-native orchestration
+
+AWS Lambda	 -    Serverless Functions	    -        Event-driven automation
+
+Terraform	   -     Infrastructure as Code (IaC)  -     Declarative resource provisioning
