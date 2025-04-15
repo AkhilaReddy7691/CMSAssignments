@@ -1,5 +1,7 @@
 ##Quiz App on Kubernetes
 
+---
+
 This project is a simple web-based Quiz App deployed using Docker and Kubernetes (Minikube). It showcases how to containerize a static web app and run it on a local Kubernetes cluster.
 
 ---
@@ -70,5 +72,15 @@ Tracks user score
 Responsive UI
 
 Full local Kubernetes deployment with NodePort
+
+---
+
+![Kubernetes1](https://github.com/user-attachments/assets/d2c849a3-367b-41d6-8df5-ba23585c2dce)
+
+
+![Kubernetes2](https://github.com/user-attachments/assets/5e26ff3c-5b39-4761-a88f-5aeb233d4404)
+
+![Kubernetes3](https://github.com/user-attachments/assets/5061a5a5-571b-460c-9e6b-ae5a66e9dca1)
+
 
 
